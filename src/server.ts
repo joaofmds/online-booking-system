@@ -1,5 +1,5 @@
 const sayHelloWorld = (msg: string) => {
-  return msg
-}
+  return msg;
+};
 
-export default sayHelloWorld
+export default sayHelloWorld;

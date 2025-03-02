@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   preset: "ts-jest",
   bail: 1, 
   clearMocks: true,
@@ -9,7 +9,7 @@ module.exports = {
   coverageDirectory: "coverage",
   testEnvironment: "node",
   transform: {
-    "^·+\\.ts$": "ts-jest"
+    "^.+\\.ts$": "ts-jest"
   },
   moduleNameMapper: {
     "@/(.*)": "<rootDir>/src/$1",
