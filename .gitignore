@@ -1,0 +1,63 @@
+# Dependências do Node.js
+node_modules/
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Builds e arquivos de saída
+dist/
+build/
+coverage/
+.tmp/
+
+# Arquivos de log e relatórios de depuração
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Testes e relatórios do Jest
+jest-test-results.json
+coverage/
+.nyc_output/
+
+# Configurações do TypeScript
+*.tsbuildinfo
+*.d.ts
+*.d.ts.map
+
+# Configurações do NestJS e cache do Prisma
+.cache/
+.prisma/
+prisma/dev.db
+prisma/dev.db-journal
+prisma/migrations/
+
+# Configuração do ESLint e Prettier
+.eslintcache
+.stylelintcache
+
+# Configurações do ambiente (env)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+
+# Arquivos do editor (VS Code, JetBrains, etc.)
+.vscode/
+.idea/
+*.iml
+
+# Logs do Docker e Kubernetes
+docker-compose.override.yml
+.kube/
+
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+desktop.ini
