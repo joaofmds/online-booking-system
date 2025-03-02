@@ -1,6 +1,6 @@
 export default {
   preset: "ts-jest",
-  bail: 1, 
+  bail: 1,
   clearMocks: true,
   collectCoverage: true,
   setupFiles: ["dotenv/config"],
@@ -9,9 +9,9 @@ export default {
   coverageDirectory: "coverage",
   testEnvironment: "node",
   transform: {
-    "^.+\\.ts$": "ts-jest"
+    "^.+\\.ts$": "ts-jest",
   },
   moduleNameMapper: {
     "@/(.*)": "<rootDir>/src/$1",
-  }
-}
+  },
+};
