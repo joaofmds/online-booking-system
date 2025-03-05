@@ -39,6 +39,21 @@ const useCaseCreations = [
     path: "../src/slices/{{camelCase name}}/repositories/contracts/add{{pascalCase name}}Repository.ts",
     templateFile: "./templates/repositories/contracts/addDomainRepository.ts.hbs",
   },
+  {
+    type: "add",
+    path: "../src/slices/{{camelCase name}}/useCases/{{pascalCase name}}/add{{pascalCase name}}.ts",
+    templateFile: "./templates/useCases/addDomain/AddDomain.ts.hbs",
+  },
+  {
+    type: "add",
+    path: "../src/slices/{{camelCase name}}/useCases/{{pascalCase name}}/Add{{pascalCase name}}.spec.ts",
+    templateFile: "./templates/useCases/addDomain/AddDomain.spec.ts.hbs",
+  },
+  {
+    type: "add",
+    path: "../src/slices/{{camelCase name}}/useCases/{{pascalCase name}}/index.ts",
+    templateFile: "./templates/useCases/addDomain/index.ts.hbs",
+  },
 ];
 
 const entitiesCreations = [
