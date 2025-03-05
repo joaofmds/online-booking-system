@@ -11,6 +11,21 @@ export default function (plop) {
     ],
     actions: [...useCaseCreations],
   });
+  plop.setGenerator("test", {
+    description: "Create a new test",
+    prompts: [
+      { type: "input", name: "name", message: "What is the name of the file?" },
+      { type: "input", name: "entity", message: "What is the name of the entity?" },
+      { type: "input", name: "layer", message: "What is the name of the layer?" },
+    ],
+    actions: [
+      {
+        type: "add",
+        path: "../src/slices/{{camelCase entity}}/{{camelCase layer}}/{{pascalCase name}}.spec.ts",
+        templateFile: "./templates/test.spec.ts.hbs",
+      },
+    ],
+  });
 }
 
 const useCaseCreations = [
