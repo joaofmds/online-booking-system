@@ -29,6 +29,7 @@ export default function (plop) {
 }
 
 const useCaseCreations = [
+  //
   {
     type: "add",
     path: "../src/slices/{{camelCase name}}/repositories/contracts/index.ts",
@@ -44,20 +45,37 @@ const useCaseCreations = [
     path: "../src/slices/{{camelCase name}}/repositories/contracts/Load{{pascalCase name}}Repository.ts",
     templateFile: "./templates/repositories/contracts/LoadDomainRepository.ts.hbs",
   },
+  //AddDomain
   {
     type: "add",
-    path: "../src/slices/{{camelCase name}}/useCases/{{pascalCase name}}/add{{pascalCase name}}.ts",
+    path: "../src/slices/{{camelCase name}}/useCases/Add{{pascalCase name}}/Add{{pascalCase name}}.ts",
     templateFile: "./templates/useCases/addDomain/AddDomain.ts.hbs",
   },
   {
     type: "add",
-    path: "../src/slices/{{camelCase name}}/useCases/{{pascalCase name}}/Add{{pascalCase name}}.spec.ts",
+    path: "../src/slices/{{camelCase name}}/useCases/Add{{pascalCase name}}/Add{{pascalCase name}}.spec.ts",
     templateFile: "./templates/useCases/addDomain/AddDomain.spec.ts.hbs",
   },
   {
     type: "add",
-    path: "../src/slices/{{camelCase name}}/useCases/{{pascalCase name}}/index.ts",
+    path: "../src/slices/{{camelCase name}}/useCases/Add{{pascalCase name}}/index.ts",
     templateFile: "./templates/useCases/addDomain/index.ts.hbs",
+  },
+  // LoadDomain
+  {
+    type: "add",
+    path: "../src/slices/{{camelCase name}}/useCases/Load{{pascalCase name}}/Load{{pascalCase name}}.ts",
+    templateFile: "./templates/useCases/loadDomain/LoadDomain.ts.hbs",
+  },
+  {
+    type: "add",
+    path: "../src/slices/{{camelCase name}}/useCases/Load{{pascalCase name}}/Load{{pascalCase name}}.spec.ts",
+    templateFile: "./templates/useCases/loadDomain/LoadDomain.spec.ts.hbs",
+  },
+  {
+    type: "add",
+    path: "../src/slices/{{camelCase name}}/useCases/Load{{pascalCase name}}/index.ts",
+    templateFile: "./templates/useCases/loadDomain/index.ts.hbs",
   },
 ];
 

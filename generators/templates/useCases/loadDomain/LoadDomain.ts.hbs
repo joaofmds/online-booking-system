@@ -1,0 +1,11 @@
+import { Load{{pascalCase name}}Repository } from "@/slices/{{camelCase name}}/repositories/contracts/Load{{pascalCase name}}Repository";
+import { {{pascalCase name}}Data } from "../../entities";
+import { Query } from "@/application/types";
+
+export type Load{{pascalCase name}} = (query: Query) => Promise<{{pascalCase name}}Data | null>;
+export type Load{{pascalCase name}}Signature = (load{{pascalCase name}}: Load{{pascalCase name}}Repository) => Load{{pascalCase name}};
+
+export const load{{pascalCase name}}: Load{{pascalCase name}}Signature =
+  (load{{pascalCase name}}Repository: Load{{pascalCase name}}Repository) => (query: Query) => {
+    return load{{pascalCase name}}Repository.load{{pascalCase name}}(query);
+  };
