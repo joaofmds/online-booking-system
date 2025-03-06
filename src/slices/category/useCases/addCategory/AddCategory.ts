@@ -1,4 +1,4 @@
-import { addCategoryRepository } from "@/slices/category/repositories/contracts/addCategoryRepository";
+import { addCategoryRepository } from "@/slices/category/repositories/contracts/AddCategoryRepository";
 import { CategoryEntity, CategoryData } from "../../entities";
 
 export type AddCategory = (data: CategoryData) => Promise<CategoryEntity | null>;

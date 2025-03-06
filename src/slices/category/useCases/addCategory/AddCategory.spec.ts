@@ -1,4 +1,4 @@
-import { addCategoryRepository } from "@/slices/category/repositories/contracts/addCategoryRepository";
+import { addCategoryRepository } from "@/slices/category/repositories/contracts/AddCategoryRepository";
 import { fakeCategoryEntity } from "@/slices/category/entities/CategoryEntity.spec";
 import MockDate from "mockdate";
 import { mock, MockProxy } from "jest-mock-extended";
