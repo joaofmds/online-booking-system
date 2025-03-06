@@ -29,7 +29,7 @@ export default function (plop) {
 }
 
 const useCaseCreations = [
-  //
+  // Repository
   {
     type: "add",
     path: "../src/slices/{{camelCase name}}/repositories/contracts/index.ts",
@@ -44,6 +44,11 @@ const useCaseCreations = [
     type: "add",
     path: "../src/slices/{{camelCase name}}/repositories/contracts/Load{{pascalCase name}}Repository.ts",
     templateFile: "./templates/repositories/contracts/LoadDomainRepository.ts.hbs",
+  },
+  {
+    type: "add",
+    path: "../src/slices/{{camelCase name}}/repositories/contracts/Load{{pascalCase name}}ByPageRepository.ts",
+    templateFile: "./templates/repositories/contracts/LoadDomainByPageRepository.ts.hbs",
   },
   //AddDomain
   {
