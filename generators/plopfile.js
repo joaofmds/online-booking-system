@@ -82,6 +82,22 @@ const useCaseCreations = [
     path: "../src/slices/{{camelCase name}}/useCases/Load{{pascalCase name}}/index.ts",
     templateFile: "./templates/useCases/loadDomain/index.ts.hbs",
   },
+  // LoadDomainByPage
+  {
+    type: "add",
+    path: "../src/slices/{{camelCase name}}/useCases/Load{{pascalCase name}}ByPage/Load{{pascalCase name}}ByPage.ts",
+    templateFile: "./templates/useCases/loadDomainByPage/LoadDomainByPage.ts.hbs",
+  },
+  {
+    type: "add",
+    path: "../src/slices/{{camelCase name}}/useCases/Load{{pascalCase name}}ByPage/Load{{pascalCase name}}ByPage.spec.ts",
+    templateFile: "./templates/useCases/loadDomainByPage/LoadDomainByPage.spec.ts.hbs",
+  },
+  {
+    type: "add",
+    path: "../src/slices/{{camelCase name}}/useCases/Load{{pascalCase name}}ByPage/index.ts",
+    templateFile: "./templates/useCases/loadDomainByPage/index.ts.hbs",
+  },
 ];
 
 const entitiesCreations = [
