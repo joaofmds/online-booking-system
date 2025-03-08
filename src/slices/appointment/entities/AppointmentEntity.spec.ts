@@ -18,7 +18,7 @@ export const fakeAppointmentEntity = {
   status: "string",
   createdForId: "string",
   read: true,
-  cancelled: true,
+  cancelled: false,
   push: true,
   email: true,
   initDate: new Date(),
