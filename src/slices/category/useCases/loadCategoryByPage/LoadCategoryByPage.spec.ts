@@ -1,6 +1,6 @@
-import { LoadCategoryByPageRepository } from "../../repositories";
+import { LoadCategoryByPageRepository } from "@/slices/category/repositories/contracts";
 import { Query } from "@/application/types";
-import { fakeCategoryPaginated } from "../../entities/CategoryEntity.spec";
+import { fakeCategoryPaginated } from "@/slices/category/entities/CategoryEntity.spec";
 import { loadCategoryByPage, LoadCategoryByPage } from "./LoadCategoryByPage";
 import MockDate from "mockdate";
 

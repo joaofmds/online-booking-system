@@ -1,5 +1,5 @@
 import { LoadCategoryByPageRepository } from "@/slices/category/repositories/contracts/LoadCategoryByPageRepository";
-import { CategoryPaginated } from "../../entities";
+import { CategoryPaginated } from "@/slices/category/entities";
 import { Query } from "@/application/types";
 
 export type LoadCategoryByPage = (query: Query) => Promise<CategoryPaginated | null>;

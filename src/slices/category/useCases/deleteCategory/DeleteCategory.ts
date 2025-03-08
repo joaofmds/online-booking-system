@@ -1,5 +1,5 @@
 import { DeleteCategoryRepository } from "@/slices/category/repositories/contracts/DeleteCategoryRepository";
-import { CategoryData } from "../../entities";
+import { CategoryData } from "@/slices/category/entities";
 import { Query } from "@/application/types";
 
 export type DeleteCategory = (query: Query) => Promise<CategoryData | null>;

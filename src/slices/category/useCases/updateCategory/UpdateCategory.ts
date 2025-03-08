@@ -1,5 +1,5 @@
 import { UpdateCategoryRepository } from "@/slices/category/repositories/contracts/UpdateCategoryRepository";
-import { CategoryData } from "../../entities";
+import { CategoryData } from "@/slices/category/entities";
 import { Query } from "@/application/types";
 
 export type UpdateCategory = (

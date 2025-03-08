@@ -1,6 +1,6 @@
-import { UpdateCategoryRepository } from "../../repositories";
+import { UpdateCategoryRepository } from "@/slices/category/repositories/contracts";
 import { Query } from "@/application/types";
-import { fakeCategoryEntity } from "../../entities/CategoryEntity.spec";
+import { fakeCategoryEntity } from "@/slices/category/entities/CategoryEntity.spec";
 import { UpdateCategory, updateCategory } from "./UpdateCategory";
 import MockDate from "mockdate";
 
