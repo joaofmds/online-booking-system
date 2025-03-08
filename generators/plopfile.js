@@ -11,6 +11,11 @@ export default function (plop) {
     ],
     actions: [...useCaseCreations],
   });
+  plop.setGenerator("all", {
+    description: "Create a new domain",
+    prompts: [{ type: "input", name: "name", message: "What is the name of the domain?" }],
+    actions: [...entitiesCreations, ...useCaseCreations],
+  });
   plop.setGenerator("test", {
     description: "Create a new test",
     prompts: [
@@ -150,12 +155,12 @@ const entitiesCreations = [
   },
   {
     type: "add",
-    path: "../src/slices/{{camelCase name}}/entities/{{camelCase name}}Entity.ts",
+    path: "../src/slices/{{camelCase name}}/entities/{{pascalCase name}}Entity.ts",
     templateFile: "./templates/entities/DomainEntity.ts.hbs",
   },
   {
     type: "add",
-    path: "../src/slices/{{camelCase name}}/entities/{{camelCase name}}Entity.spec.ts",
+    path: "../src/slices/{{camelCase name}}/entities/{{pascalCase name}}Entity.spec.ts",
     templateFile: "./templates/entities/DomainEntity.spec.ts.hbs",
   },
 ];
