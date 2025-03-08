@@ -1,6 +1,6 @@
-import { Load{{pascalCase name}}Repository } from "../../repositories";
+import { Load{{pascalCase name}}Repository } from "@/slices/{{pascalCase name}}/repositories/contracts";
 import { Query } from "@/application/types";
-import { fake{{pascalCase name}}Entity } from "../../entities/{{pascalCase name}}Entity.spec";
+import { fake{{pascalCase name}}Entity } from "@/slices/{{pascalCase name}}entities/{{pascalCase name}}Entity.spec";
 import { Load{{pascalCase name}}, load{{pascalCase name}} } from "./Load{{pascalCase name}}";
 import MockDate from "mockdate";
 
@@ -34,14 +34,14 @@ describe("Load{{pascalCase name}}", () => {
   });
 
   it("should return a{{camelCase name}} loaded when load{{pascalCase name}}Repository insert it", async () => {
-    const{{camelCase name}} = await testInstance(fakeQuery);
-    expect({{pascalCase name}}).toEqual(fake{{pascalCase name}}Entity);
+    const {{camelCase name}} = await testInstance(fakeQuery);
+    expect({{camelCase name}}).toEqual(fake{{pascalCase name}}Entity);
   });
 
   it("should return null a{{camelCase name}} loaded when load{{pascalCase name}}Repository insert it", async () => {
     load{{pascalCase name}}Repository.load{{pascalCase name}}.mockResolvedValue(null);
-    const{{camelCase name}} = await testInstance(fakeQuery);
-    expect({{pascalCase name}}).toBeNull();
+    const {{camelCase name}} = await testInstance(fakeQuery);
+    expect({{camelCase name}}).toBeNull();
   });
 
   it("should rethrow if load{{pascalCase name}} of load{{pascalCase name}}Repository throws", async () => {

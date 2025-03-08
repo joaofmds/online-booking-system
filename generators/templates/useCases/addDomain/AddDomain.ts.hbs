@@ -1,5 +1,5 @@
-import { add{{pascalCase name}}Repository } from "@/slices/{{pascalCase name}}/repositories/contracts/add{{pascalCase name}}Repository";
-import { {{pascalCase name}}Entity, {{pascalCase name}}Data } from "../../entities";
+import { add{{pascalCase name}}Repository } from "@/slices/{{camelCase name}}/repositories/contracts/add{{pascalCase name}}Repository";
+import { {{pascalCase name}}Entity, {{pascalCase name}}Data } from "@slices/{{camelCase name}}/entities";
 
 export type Add{{pascalCase name}} = (data: {{pascalCase name}}Data) => Promise<{{pascalCase name}}Entity | null>;
 export type Add{{pascalCase name}}Signature = (Add{{pascalCase name}}: add{{pascalCase name}}Repository) => Add{{pascalCase name}};
