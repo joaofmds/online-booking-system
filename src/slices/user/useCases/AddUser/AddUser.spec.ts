@@ -1,9 +1,9 @@
-import { addUserRepository } from "@/slices/User/repositories/contracts/addUserRepository";
-import { fakeUserEntity } from "@/slices/User/entities/UserEntity.spec";
+import { addUserRepository } from "@/slices/user/repositories/contracts";
+import { fakeUserEntity } from "@/slices/user/entities/userEntity.spec";
 import MockDate from "mockdate";
 import { mock, MockProxy } from "jest-mock-extended";
 import { addUser } from "./AddUser";
-import { UserEntity } from "@/slices/User/entities";
+import { UserEntity } from "@/slices/user/entities";
 
 describe("addUser", () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -26,9 +26,7 @@ describe("addUser", () => {
 
   it("should call addUser of AddUserRepository with correct values", async () => {
     await testInstance(fakeUserEntity);
-    expect(addUserRepository.addUser).toHaveBeenCalledWith(
-      new UserEntity(fakeUserEntity)
-    );
+    expect(addUserRepository.addUser).toHaveBeenCalledWith(new UserEntity(fakeUserEntity));
     expect(addUserRepository.addUser).toHaveBeenCalledTimes(1);
   });
 

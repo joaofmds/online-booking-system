@@ -1,5 +1,5 @@
 import { LoadUserRepository } from "@/slices/user/repositories/contracts/LoadUserRepository";
-import { UserData } from "../../entities";
+import { UserData } from "@/slices/user/entities";
 import { Query } from "@/application/types";
 
 export type LoadUser = (query: Query) => Promise<UserData | null>;

@@ -1,5 +1,5 @@
 import { LoadUserByPageRepository } from "@/slices/user/repositories/contracts/LoadUserByPageRepository";
-import { UserPaginated } from "../../entities";
+import { UserPaginated } from "@/slices/user/entities";
 import { Query } from "@/application/types";
 
 export type LoadUserByPage = (query: Query) => Promise<UserPaginated | null>;

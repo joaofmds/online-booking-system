@@ -1,6 +1,6 @@
-import { UpdateUserRepository } from "../../repositories";
+import { UpdateUserRepository } from "@/slices/user/repositories/contracts";
 import { Query } from "@/application/types";
-import { fakeUserEntity } from "../../entities/UserEntity.spec";
+import { fakeUserEntity } from "@/slices/user/entities/userEntity.spec";
 import { UpdateUser, updateUser } from "./UpdateUser";
 import MockDate from "mockdate";
 

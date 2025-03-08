@@ -1,6 +1,6 @@
-import { LoadUserByPageRepository } from "../../repositories";
+import { LoadUserByPageRepository } from "@/slices/user/repositories/contracts";
 import { Query } from "@/application/types";
-import { fakeUserPaginated } from "../../entities/UserEntity.spec";
+import { fakeUserPaginated } from "@/slices/user/entities/userEntity.spec";
 import { LoadUserByPage, loadUserByPage } from "./LoadUserByPage";
 import MockDate from "mockdate";
 
@@ -16,9 +16,7 @@ describe("LoadUserByPage", () => {
     loadUserByPageRepository = mock();
     fakeQuery = { fields: { name: "123" }, options: {} };
 
-    loadUserByPageRepository.loadUserByPage.mockResolvedValue(
-      fakeUserPaginated
-    );
+    loadUserByPageRepository.loadUserByPage.mockResolvedValue(fakeUserPaginated);
   });
 
   beforeEach(() => {
@@ -31,9 +29,7 @@ describe("LoadUserByPage", () => {
 
   it("should call loadUserByPage of LoadUserByPageRepository with correct values", async () => {
     await testInstance(fakeQuery);
-    expect(loadUserByPageRepository.loadUserByPage).toHaveBeenCalledWith(
-      fakeQuery
-    );
+    expect(loadUserByPageRepository.loadUserByPage).toHaveBeenCalledWith(fakeQuery);
     expect(loadUserByPageRepository.loadUserByPage).toHaveBeenCalledTimes(1);
   });
 
@@ -49,9 +45,7 @@ describe("LoadUserByPage", () => {
   });
 
   it("should rethrow if loadUserByPage of loadUserByPageRepository throws", async () => {
-    loadUserByPageRepository.loadUserByPage.mockRejectedValueOnce(
-      new Error("any_error")
-    );
+    loadUserByPageRepository.loadUserByPage.mockRejectedValueOnce(new Error("any_error"));
     await expect(testInstance(fakeQuery)).rejects.toThrowError("any_error");
   });
 });

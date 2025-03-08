@@ -1,5 +1,5 @@
 import { DeleteUserRepository } from "@/slices/user/repositories/contracts/DeleteUserRepository";
-import { fakeUserEntity } from "@/slices/user/entities/UserEntity.spec";
+import { fakeUserEntity } from "@/slices/user/entities/userEntity.spec";
 import MockDate from "mockdate";
 import { mock, MockProxy } from "jest-mock-extended";
 import { DeleteUser, deleteUser } from "./DeleteUser";

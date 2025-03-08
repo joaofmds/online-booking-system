@@ -1,6 +1,6 @@
-import { LoadUserRepository } from "../../repositories";
+import { LoadUserRepository } from "@/slices/user/repositories/contracts";
 import { Query } from "@/application/types";
-import { fakeUserEntity } from "../../entities/UserEntity.spec";
+import { fakeUserEntity } from "@/slices/user/entities/userEntity.spec";
 import { LoadUser, loadUser } from "./LoadUser";
 import MockDate from "mockdate";
 
@@ -34,14 +34,14 @@ describe("LoadUser", () => {
   });
 
   it("should return auser loaded when loadUserRepository insert it", async () => {
-    constuser = await testInstance(fakeQuery);
-    expect(User).toEqual(fakeUserEntity);
+    const user = await testInstance(fakeQuery);
+    expect(user).toEqual(fakeUserEntity);
   });
 
   it("should return null auser loaded when loadUserRepository insert it", async () => {
     loadUserRepository.loadUser.mockResolvedValue(null);
-    constuser = await testInstance(fakeQuery);
-    expect(User).toBeNull();
+    const user = await testInstance(fakeQuery);
+    expect(user).toBeNull();
   });
 
   it("should rethrow if loadUser of loadUserRepository throws", async () => {
