@@ -1,6 +1,6 @@
-import { UpdateServiceRepository } from "../../repositories/contracts";
+import { UpdateServiceRepository } from "@/slices/service/repositories/contracts";
 import { Query } from "@/application/types";
-import { fakeServiceEntity } from "../../entities/ServiceEntity.spec";
+import { fakeServiceEntity } from "@/slices/service/entities/ServiceEntity.spec";
 import { UpdateService, updateService } from "./UpdateService";
 import MockDate from "mockdate";
 

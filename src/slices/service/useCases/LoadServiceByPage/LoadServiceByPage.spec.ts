@@ -1,6 +1,6 @@
-import { LoadServiceByPageRepository } from "../../repositories/contracts";
+import { LoadServiceByPageRepository } from "@/slices/service/repositories/contracts";
 import { Query } from "@/application/types";
-import { fakeServicePaginated } from "../../entities/ServiceEntity.spec";
+import { fakeServicePaginated } from "@/slices/service/entities/ServiceEntity.spec";
 import { LoadServiceByPage, loadServiceByPage } from "./LoadServiceByPage";
 import MockDate from "mockdate";
 

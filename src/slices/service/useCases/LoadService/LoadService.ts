@@ -1,5 +1,5 @@
 import { LoadServiceRepository } from "@/slices/service/repositories/contracts/LoadServiceRepository";
-import { ServiceData } from "../../entities";
+import { ServiceData } from "@/slices/service/entities";
 import { Query } from "@/application/types";
 
 export type LoadService = (query: Query) => Promise<ServiceData | null>;

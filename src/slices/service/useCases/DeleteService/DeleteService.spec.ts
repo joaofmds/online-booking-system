@@ -1,5 +1,5 @@
 import { DeleteServiceRepository } from "@/slices/service/repositories/contracts/DeleteServiceRepository";
-import { fakeServiceEntity } from "../../entities/ServiceEntity.spec";
+import { fakeServiceEntity } from "@/slices/service/entities/ServiceEntity.spec";
 import MockDate from "mockdate";
 import { mock, MockProxy } from "jest-mock-extended";
 import { DeleteService, deleteService } from "./DeleteService";

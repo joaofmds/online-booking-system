@@ -1,5 +1,5 @@
 import { DeleteServiceRepository } from "@/slices/service/repositories/contracts/DeleteServiceRepository";
-import { ServiceData } from "../../entities";
+import { ServiceData } from "@/slices/service/entities";
 import { Query } from "@/application/types";
 
 export type DeleteService = (query: Query) => Promise<ServiceData | null>;
