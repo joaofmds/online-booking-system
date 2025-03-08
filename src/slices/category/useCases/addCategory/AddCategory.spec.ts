@@ -2,12 +2,11 @@ import { addCategoryRepository } from "@/slices/category/repositories/contracts/
 import { fakeCategoryEntity } from "@/slices/category/entities/CategoryEntity.spec";
 import MockDate from "mockdate";
 import { mock, MockProxy } from "jest-mock-extended";
-import { addCategory } from "./AddCategory";
+import { AddCategory, addCategory } from "./AddCategory";
 import { CategoryEntity } from "@/slices/category/entities";
 
 describe("addCategory", () => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let testInstance: any;
+  let testInstance: AddCategory;
   let addCategoryRepository: MockProxy<addCategoryRepository>;
 
   beforeAll(async () => {
