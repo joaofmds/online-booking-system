@@ -55,6 +55,11 @@ const useCaseCreations = [
     path: "../src/slices/{{camelCase name}}/repositories/contracts/Delete{{pascalCase name}}Repository.ts",
     templateFile: "./templates/repositories/contracts/DeleteDomainRepository.ts.hbs",
   },
+  {
+    type: "add",
+    path: "../src/slices/{{camelCase name}}/repositories/contracts/Update{{pascalCase name}}Repository.ts",
+    templateFile: "./templates/repositories/contracts/UpdateDomainRepository.ts.hbs",
+  },
   //AddDomain
   {
     type: "add",
