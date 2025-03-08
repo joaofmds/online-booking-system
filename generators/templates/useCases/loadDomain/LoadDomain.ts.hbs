@@ -1,5 +1,5 @@
-import { Load{{pascalCase name}}Repository } from "@/slices/{{camelCase name}}/repositories/contracts/Load{{pascalCase name}}Repository";
-import { {{pascalCase name}}Data } from "@slices/{{camelCase name}}/entities";
+import { Load{{pascalCase name}}Repository } from "@/slices/{{camelCase name}}/repositories/contracts";
+import { {{pascalCase name}}Data } from "@/slices/{{camelCase name}}/entities";
 import { Query } from "@/application/types";
 
 export type Load{{pascalCase name}} = (query: Query) => Promise<{{pascalCase name}}Data | null>;
