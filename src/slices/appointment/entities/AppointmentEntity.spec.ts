@@ -15,7 +15,7 @@ export const fakeAppointmentEntity = {
   clientId: "string",
   professionalId: "string",
   serviceId: "string",
-  status: "string",
+  status: 0,
   createdForId: "string",
   read: true,
   cancelled: false,
