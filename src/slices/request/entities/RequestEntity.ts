@@ -100,7 +100,7 @@ export class RequestEntity {
     this.recurrence = data.recurrence;
     this.order = data.order;
     this.ride = data.ride;
-    this.updatedById = null;
-    this.updatedByRole = null;
+    this.updatedById = data.updatedById;
+    this.updatedByRole = data.updatedByRole;
   }
 }

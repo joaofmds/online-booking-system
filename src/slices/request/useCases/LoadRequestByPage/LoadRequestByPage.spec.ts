@@ -16,9 +16,7 @@ describe("LoadRequestByPage", () => {
     loadRequestByPageRepository = mock();
     fakeQuery = { fields: { name: "123" }, options: {} };
 
-    loadRequestByPageRepository.loadRequestByPage.mockResolvedValue(
-      fakeRequestPaginated
-    );
+    loadRequestByPageRepository.loadRequestByPage.mockResolvedValue(fakeRequestPaginated);
   });
 
   beforeEach(() => {
@@ -31,9 +29,7 @@ describe("LoadRequestByPage", () => {
 
   it("should call loadRequestByPage of LoadRequestByPageRepository with correct values", async () => {
     await testInstance(fakeQuery);
-    expect(loadRequestByPageRepository.loadRequestByPage).toHaveBeenCalledWith(
-      fakeQuery
-    );
+    expect(loadRequestByPageRepository.loadRequestByPage).toHaveBeenCalledWith(fakeQuery);
     expect(loadRequestByPageRepository.loadRequestByPage).toHaveBeenCalledTimes(1);
   });
 
